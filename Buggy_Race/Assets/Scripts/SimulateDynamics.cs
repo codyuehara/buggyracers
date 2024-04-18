@@ -23,9 +23,9 @@ public class SimulateDynamics : MonoBehaviour
         
         DroneODE ode = new DroneODE();
         ode.SetParameters(10);
-        ode.SetForce(new Vector3(0,0,1));
+        ode.SetForce(new Vector3(0,0,100));
         
-        Vector3 init_pos = new Vector3(-5,5,-5);
+        Vector3 init_pos = cube.transform.position;
         Vector3 init_vel = new Vector3(0,0,0);
         Vector3 init_angVel = new Vector3(0,0,0);
         states = new Vector3[]{init_pos, init_vel, init_angVel};
